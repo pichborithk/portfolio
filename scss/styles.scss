@@ -130,9 +130,9 @@ section {
   .active-btn {
     background-color: var(--secondary-color) !important;
     transition: var(--ease-in-out);
-    i {
-      color: var(--white-color) !important;
-    }
+    // i {
+    //   color: var(--white-color) !important;
+    // }
   }
   .control {
     @include display-flex;
@@ -146,7 +146,7 @@ section {
     box-shadow: var(--box-shadow-1);
     i {
       font-size: 1.2rem;
-      color: var(--grey-2-color);
+      color: var(--grey-0-color);
       pointer-events: none;
     }
   }
@@ -618,12 +618,17 @@ section {
     overflow: hidden;
     .btn-text {
       padding: 0 2rem;
+      color: var(--secondary-color);
     }
     .btn-icon {
       @include display-flex;
       background-color: var(--secondary-color);
       border-radius: 50%;
       padding: 1rem;
+
+      i {
+        color: var(--grey-0-color);
+      }
     }
     &::before {
       content: '';
@@ -638,6 +643,11 @@ section {
       border-radius: 30px;
     }
     &:hover {
+      .btn-text {
+        transition: var(--ease-in-out);
+        color: var(--grey-0-color);
+      }
+
       &::before {
         transition: var(--ease-in-out);
         background-color: var(--secondary-color);
