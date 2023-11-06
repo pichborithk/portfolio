@@ -155,24 +155,39 @@ section {
 }
 
 .theme-btn {
-  @include display-flex;
   position: fixed;
+  right: 8%;
   top: 5%;
-  right: 3%;
+  font-size: rem(48);
+  z-index: 10;
   cursor: pointer;
-  background-color: var(--grey-4-color);
-  width: 70px;
-  height: 70px;
-  border-radius: 50%;
-  box-shadow: 0 3px 15px rgba(0, 0, 0, 0.2);
-  transition: all 0.1s ease-in-out;
-  &:active {
-    transform: translateY(-10px);
+
+  > i {
+    @include gradient-text(var(--secondary-color), var(--white-color));
+    position: absolute;
   }
-  i {
-    font-size: 1.5rem;
-    color: var(--grey-2-color);
-    pointer-events: none;
+
+  > .fa-moon {
+    transition: all 1s ease-in-out;
+  }
+
+  > .fa-sun {
+    transition: all 1s ease-in-out;
+    opacity: 0;
+  }
+
+  &.dark {
+    > .fa-moon {
+      transition: all 1s ease-in-out;
+      transform: rotate(720deg);
+      opacity: 0;
+    }
+
+    > .fa-sun {
+      transition: all 1s ease-in-out;
+      opacity: 1;
+      transform: rotate(720deg);
+    }
   }
 }
 

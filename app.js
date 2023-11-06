@@ -11,15 +11,17 @@ function toggleActiveButton() {
 
 function toggleSection() {
   const id = this.dataset.id;
-  sections.forEach((section) => section.classList.remove('active'));
+  sections.forEach(section => section.classList.remove('active'));
   document.querySelector(`#${id}`).classList.add('active');
 }
 
-sectionButtons.forEach((btn) =>
+sectionButtons.forEach(btn =>
   btn.addEventListener('click', toggleActiveButton)
 );
 
-sectionButtons.forEach((btn) => btn.addEventListener('click', toggleSection));
+sectionButtons.forEach(btn => btn.addEventListener('click', toggleSection));
+
 themeButton.addEventListener('click', function () {
   document.body.classList.toggle('light-mode');
+  themeButton.classList.toggle('dark');
 });

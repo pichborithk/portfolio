@@ -1,3 +1,12 @@
 @function rem($pixels, $context: 16) {
   @return ($pixels / $context) * 1rem;
 }
+
+@mixin gradient-text($first-color, $second-color, $direction: left) {
+  background: -webkit-linear-gradient($direction, $first-color, $second-color);
+  background-size: 100%;
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-text-fill-color: transparent;
+}
