@@ -1,5 +1,7 @@
 @use './functions.scss' as *;
 
+@import 'components';
+
 @mixin display-flex($a: center, $j: center) {
   display: flex;
   align-items: $a;
@@ -466,57 +468,81 @@ section {
 
 /* ---------------------------------- Skills --------------------------------- */
 
-.stats {
-  padding-bottom: 4rem;
+.stats-container {
+  padding-top: 4rem;
+  padding-bottom: 5rem;
+
   .progress-bars {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 2rem;
-    .progress-bar {
-      display: flex;
-      flex-direction: column;
-      .progress-title {
-        font-weight: 500;
+
+    .skill {
+      &.html {
+        @include skill-bar(95%);
       }
-      .progress-con {
-        display: flex;
-        align-items: center;
-        .progress-text {
-          color: var(--grey-3-color);
-        }
-        .progress {
-          width: 100%;
-          height: 0.45rem;
-          background-color: var(--grey-4-color);
-          margin-left: 1rem;
-          position: relative;
-          span {
-            position: absolute;
-            top: 0;
-            left: 0;
-            height: 100%;
-            background-color: var(--secondary-color);
-            transition: var(--ease-in-out);
-          }
-          .html {
-            width: 90%;
-          }
-          .css {
-            width: 80%;
-          }
-          .javascript {
-            width: 85%;
-          }
-          .react {
-            width: 70%;
-          }
-          .nodejs {
-            width: 60%;
-          }
-          .postgres {
-            width: 70%;
-          }
-        }
+      &.css {
+        @include skill-bar(90%);
+      }
+      &.js {
+        @include skill-bar(90%);
+      }
+      &.typescript {
+        @include skill-bar(85%);
+      }
+      &.react {
+        @include skill-bar(90%);
+      }
+      &.redux {
+        @include skill-bar(75%);
+      }
+      &.sass {
+        @include skill-bar(85%);
+      }
+      &.tailwind {
+        @include skill-bar(90%);
+      }
+      &.node {
+        @include skill-bar(80%);
+      }
+      &.express {
+        @include skill-bar(85%);
+      }
+      &.postgres {
+        @include skill-bar(85%);
+      }
+      &.mongodb {
+        @include skill-bar(85%);
+      }
+      &.next {
+        @include skill-bar(70%);
+      }
+      &.python {
+        @include skill-bar(80%);
+      }
+      &.java {
+        @include skill-bar(70%);
+      }
+      &.flask {
+        @include skill-bar(75%);
+      }
+      &.graphql {
+        @include skill-bar(70%);
+      }
+      &.firebase {
+        @include skill-bar(70%);
+      }
+      &.docker {
+        @include skill-bar(70%);
+      }
+      &.jest {
+        @include skill-bar(70%);
+      }
+      &.redis {
+        @include skill-bar(70%);
+      }
+      &.figma {
+        @include skill-bar(70%);
       }
     }
   }
