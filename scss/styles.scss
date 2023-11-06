@@ -326,75 +326,21 @@ section {
   }
 }
 
-/* ---------------------------------- Stats --------------------------------- */
-
-.about-stats {
-  padding-bottom: 4rem;
-  .progress-bars {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 2rem;
-    .progress-bar {
-      display: flex;
-      flex-direction: column;
-      .progress-title {
-        font-weight: 500;
-      }
-      .progress-con {
-        display: flex;
-        align-items: center;
-        .progress-text {
-          color: var(--grey-3-color);
-        }
-        .progress {
-          width: 100%;
-          height: 0.45rem;
-          background-color: var(--grey-4-color);
-          margin-left: 1rem;
-          position: relative;
-          span {
-            position: absolute;
-            top: 0;
-            left: 0;
-            height: 100%;
-            background-color: var(--secondary-color);
-            transition: var(--ease-in-out);
-          }
-          .html {
-            width: 90%;
-          }
-          .css {
-            width: 80%;
-          }
-          .javascript {
-            width: 85%;
-          }
-          .react {
-            width: 70%;
-          }
-          .nodejs {
-            width: 60%;
-          }
-          .postgres {
-            width: 70%;
-          }
-        }
-      }
-    }
-  }
-}
-
 /* -------------------------------- Timeline -------------------------------- */
 
 .timeline {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
+  // grid-auto-flow: row;
+  // grid-template-rows: repeat(3, 1fr);
   gap: 2rem;
   padding-bottom: 3rem;
+
   .timeline-item {
     position: relative;
     padding-left: 3rem;
     border-left: 1px solid var(--grey-5-color);
+
     .timeline-icon {
       @include display-flex;
       position: absolute;
@@ -506,7 +452,7 @@ section {
 
     .techs {
       text-align: center;
-      font-size: rem(32);
+      font-size: rem(36);
     }
 
     &:hover {
@@ -518,59 +464,63 @@ section {
   }
 }
 
-/* ---------------------------------- Blogs --------------------------------- */
+/* ---------------------------------- Skills --------------------------------- */
 
-.blogs {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 2rem;
-  margin-top: 3rem;
-  .blog {
-    position: relative;
-    background-color: var(--grey-5-color);
-    border-radius: 5px;
-    box-shadow: 1px 1px 20px rgba(0, 0, 0, 0.1);
-    transition: var(--ease-in-out);
-    &:hover {
-      box-shadow: 1px 1px 20px rgba(0, 0, 0, 0.3);
-      transform: translateY(-5px);
-      transition: var(--ease-in-out);
-      img {
-        filter: grayscale(0);
-        transform: scale(1.1);
-        box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.8);
+.stats {
+  padding-bottom: 4rem;
+  .progress-bars {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+    .progress-bar {
+      display: flex;
+      flex-direction: column;
+      .progress-title {
+        font-weight: 500;
       }
-    }
-    img {
-      width: 100%;
-      height: 300px;
-      object-fit: cover;
-      border-radius: 5px 5px 0px 0px;
-      filter: grayscale(100%);
-      transition: var(--ease-in-out);
-    }
-    .blog-text {
-      margin-top: -7px;
-      padding: 1.1rem;
-      border-top: 8px solid var(--secondary-color);
-      h4 {
-        font-size: 1.5rem;
-        margin-bottom: 0.7rem;
-        transition: var(--ease-in-out);
-        cursor: pointer;
-        &:hover {
-          color: var(--secondary-color);
+      .progress-con {
+        display: flex;
+        align-items: center;
+        .progress-text {
+          color: var(--grey-3-color);
         }
-      }
-      p {
-        color: var(--grey-2-color);
-        line-height: 2rem;
-        padding-bottom: 1rem;
+        .progress {
+          width: 100%;
+          height: 0.45rem;
+          background-color: var(--grey-4-color);
+          margin-left: 1rem;
+          position: relative;
+          span {
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 100%;
+            background-color: var(--secondary-color);
+            transition: var(--ease-in-out);
+          }
+          .html {
+            width: 90%;
+          }
+          .css {
+            width: 80%;
+          }
+          .javascript {
+            width: 85%;
+          }
+          .react {
+            width: 70%;
+          }
+          .nodejs {
+            width: 60%;
+          }
+          .postgres {
+            width: 70%;
+          }
+        }
       }
     }
   }
 }
-
 // Contact
 
 .contact-content-con {
