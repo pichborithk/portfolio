@@ -200,7 +200,7 @@ section {
       height: 90%;
       width: 68%;
       margin-left: 4rem;
-      background-color: var(--black-color);
+      background-color: var(--primary-color);
       transition: var(--ease-in-out);
       img {
         width: 100%;
@@ -219,15 +219,20 @@ section {
     flex-direction: column;
     justify-content: center;
     padding-right: 18rem;
+
     .name {
       font-size: 3rem;
       span {
         color: var(--secondary-color);
       }
     }
+
     p {
       margin: 1.5rem 0;
       line-height: 2rem;
+      span {
+        color: var(--secondary-color);
+      }
     }
   }
 }
