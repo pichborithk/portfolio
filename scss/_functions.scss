@@ -1,5 +1,5 @@
 @function rem($pixels, $context: 16) {
-  @return ($pixels / $context) * 1rem;
+  @return calc($pixels / $context) * 1rem;
 }
 
 @mixin gradient-text($first-color, $second-color, $direction: left) {
